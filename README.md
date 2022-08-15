@@ -1,1 +1,1 @@
-# Amazon.com-Search-ConfirmSpecificProduct-RobotFramework
+# Amazon.com-Search-VerifySpecificProduct-RobotFramework
