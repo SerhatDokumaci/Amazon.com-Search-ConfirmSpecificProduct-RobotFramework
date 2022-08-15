@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220815 13:28:43.715" rpa="false" schemaversion="3">
+<suite id="s1" name="amazonSearchAppTest" source="C:\Users\Javesque\PycharmProjects\Amazon.com RobotFramework\Tests\amazonSearchAppTest.robot">
+<test id="s1-t1" name="TC001" line="16">
+<kw name="Create Session" library="utilsApp" type="SETUP">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5 Seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220815 13:28:43.958" endtime="20220815 13:28:43.958"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>About:Blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220815 13:28:43.958" level="INFO">Opening browser 'Chrome' to base url 'About:Blank'.</msg>
+<status status="PASS" starttime="20220815 13:28:43.958" endtime="20220815 13:28:45.765"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220815 13:28:45.766" level="INFO">Opening url 'https://www.amazon.com.tr/'</msg>
+<status status="PASS" starttime="20220815 13:28:45.765" endtime="20220815 13:28:49.851"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220815 13:28:49.851" endtime="20220815 13:28:50.481"/>
+</kw>
+<status status="PASS" starttime="20220815 13:28:43.957" endtime="20220815 13:28:50.482"/>
+</kw>
+<kw name="HomePage Actions" library="amazonHomePageApp">
+<kw name="Go to Sign In Page Verify" library="amazonHomePage">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://www.amazon.com.tr/</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220815 13:28:51.002" level="INFO">Current location is 'https://www.amazon.com.tr/'.</msg>
+<status status="PASS" starttime="20220815 13:28:50.483" endtime="20220815 13:28:51.002"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=nav-link-accountList</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220815 13:28:51.002" endtime="20220815 13:28:51.524"/>
+</kw>
+<status status="PASS" starttime="20220815 13:28:50.482" endtime="20220815 13:28:51.524"/>
+</kw>
+<kw name="Go to Sign In Page Mouse Actions" library="amazonHomePage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>id=nav-link-accountList</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220815 13:28:51.525" level="INFO">Simulating Mouse Over on element 'id=nav-link-accountList'.</msg>
+<status status="PASS" starttime="20220815 13:28:51.525" endtime="20220815 13:28:52.815"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=#nav-flyout-ya-signin .nav-action-inner</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:28:52.816" level="INFO">Clicking element 'css=#nav-flyout-ya-signin .nav-action-inner'.</msg>
+<status status="PASS" starttime="20220815 13:28:52.815" endtime="20220815 13:28:54.338"/>
+</kw>
+<status status="PASS" starttime="20220815 13:28:51.525" endtime="20220815 13:28:54.338"/>
+</kw>
+<status status="PASS" starttime="20220815 13:28:50.482" endtime="20220815 13:28:54.338"/>
+</kw>
+<kw name="Sign In Page Actions" library="amazonSignInApp">
+<kw name="Sign In E-mail" library="amazonSignIn">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Giriş yap</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220815 13:28:55.537" level="INFO">Current page contains text 'Giriş yap'.</msg>
+<status status="PASS" starttime="20220815 13:28:54.339" endtime="20220815 13:28:55.537"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>E-posta adresi veya telefon numarası</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220815 13:28:56.567" level="INFO">Current page contains text 'E-posta adresi veya telefon numarası'.</msg>
+<status status="PASS" starttime="20220815 13:28:55.537" endtime="20220815 13:28:56.567"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=ap_email</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:28:56.567" level="INFO">Clicking element 'id=ap_email'.</msg>
+<status status="PASS" starttime="20220815 13:28:56.567" endtime="20220815 13:28:57.627"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ap_email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220815 13:28:57.628" level="INFO">Typing text 'maremart11@gmail.com' into text field 'id=ap_email'.</msg>
+<status status="PASS" starttime="20220815 13:28:57.627" endtime="20220815 13:28:59.225"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=continue</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:28:59.225" level="INFO">Clicking element 'id=continue'.</msg>
+<status status="PASS" starttime="20220815 13:28:59.225" endtime="20220815 13:29:00.746"/>
+</kw>
+<status status="PASS" starttime="20220815 13:28:54.339" endtime="20220815 13:29:00.746"/>
+</kw>
+<kw name="Sign In Password" library="amazonSignIn">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Şifre</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220815 13:29:01.775" level="INFO">Current page contains text 'Şifre'.</msg>
+<status status="PASS" starttime="20220815 13:29:00.746" endtime="20220815 13:29:01.775"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=auth-fpp-link-bottom</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220815 13:29:01.775" endtime="20220815 13:29:02.296"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=ap_password</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:02.296" level="INFO">Clicking element 'id=ap_password'.</msg>
+<status status="PASS" starttime="20220815 13:29:02.296" endtime="20220815 13:29:03.356"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ap_password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:03.356" level="INFO">Typing text 'Gswqbc9a02+' into text field 'id=ap_password'.</msg>
+<status status="PASS" starttime="20220815 13:29:03.356" endtime="20220815 13:29:04.924"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=signInSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:04.924" level="INFO">Clicking element 'id=signInSubmit'.</msg>
+<status status="PASS" starttime="20220815 13:29:04.924" endtime="20220815 13:29:06.013"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:00.746" endtime="20220815 13:29:06.013"/>
+</kw>
+<status status="PASS" starttime="20220815 13:28:54.338" endtime="20220815 13:29:06.013"/>
+</kw>
+<kw name="Amazon Search Actions" library="amazonSearchApp">
+<kw name="Search Page Verify" library="amazonSearch">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220815 13:29:06.014" endtime="20220815 13:29:07.738"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:06.014" endtime="20220815 13:29:07.738"/>
+</kw>
+<kw name="Click Search Field" library="amazonSearch">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:07.739" level="INFO">Clicking element 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20220815 13:29:07.738" endtime="20220815 13:29:08.842"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<arg>Bilgisayar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:08.843" level="INFO">Typing text 'Bilgisayar' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20220815 13:29:08.842" endtime="20220815 13:29:10.423"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=nav-search-submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:10.423" level="INFO">Clicking element 'id=nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20220815 13:29:10.423" endtime="20220815 13:29:13.159"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:07.738" endtime="20220815 13:29:13.159"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:06.014" endtime="20220815 13:29:13.159"/>
+</kw>
+<kw name="Amazon Search Result Actions" library="amazonSearchResultApp">
+<kw name="Search Results Page Verify" library="amazonSearchResult">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>bilgisayar</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220815 13:29:14.203" level="INFO">Current page contains text 'bilgisayar'.</msg>
+<status status="PASS" starttime="20220815 13:29:13.160" endtime="20220815 13:29:14.203"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:13.160" endtime="20220815 13:29:14.203"/>
+</kw>
+<kw name="Search Results Page" library="amazonSearchResult">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Search First Item}</var>
+<arg>link=HP 15,6 KOBİ Üstten Açılır Çanta, Siyah, T0F83AA</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:15.801" level="INFO">${Search First Item} = HP 15,6 KOBİ Üstten Açılır Çanta, Siyah, T0F83AA</msg>
+<status status="PASS" starttime="20220815 13:29:14.204" endtime="20220815 13:29:15.801"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Search First Item}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220815 13:29:15.802" level="INFO">${Search First Item} = HP 15,6 KOBİ Üstten Açılır Çanta, Siyah, T0F83AA</msg>
+<status status="PASS" starttime="20220815 13:29:15.802" endtime="20220815 13:29:15.802"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=[data-component-type="s-search-result"]:nth-child(3) .s-product-image-container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:15.802" level="INFO">Clicking element 'css=[data-component-type="s-search-result"]:nth-child(3) .s-product-image-container'.</msg>
+<status status="PASS" starttime="20220815 13:29:15.802" endtime="20220815 13:29:19.922"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:14.204" endtime="20220815 13:29:19.922"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:13.159" endtime="20220815 13:29:19.922"/>
+</kw>
+<kw name="Detail Page Actions" library="amazonDetailPageApp">
+<kw name="Detail Page Verify" library="amazonDetailPage">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id=nav-cart-count</arg>
+<arg>0</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220815 13:29:19.924" level="INFO">Verifying element 'id=nav-cart-count' contains exact text '0'.</msg>
+<status status="PASS" starttime="20220815 13:29:19.923" endtime="20220815 13:29:20.968"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:19.923" endtime="20220815 13:29:20.968"/>
+</kw>
+<kw name="Detail Page" library="amazonDetailPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Search First Item Detail}</var>
+<arg>id=productTitle</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:22.010" level="INFO">${Search First Item Detail} = HP 15,6 KOBİ Üstten Açılır Çanta, Siyah, T0F83AA</msg>
+<status status="PASS" starttime="20220815 13:29:20.969" endtime="20220815 13:29:22.010"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Search First Item Detail}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220815 13:29:22.010" level="INFO">${Search First Item Detail} = HP 15,6 KOBİ Üstten Açılır Çanta, Siyah, T0F83AA</msg>
+<status status="PASS" starttime="20220815 13:29:22.010" endtime="20220815 13:29:22.010"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Detail Page Price}</var>
+<arg>css=.a-spacing-micro .a-price-whole</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:23.053" level="INFO">${Detail Page Price} = 456</msg>
+<status status="PASS" starttime="20220815 13:29:22.011" endtime="20220815 13:29:23.053"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Detail Page Price}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220815 13:29:23.054" level="INFO">${Detail Page Price} = 456</msg>
+<status status="PASS" starttime="20220815 13:29:23.054" endtime="20220815 13:29:23.054"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Search First Item}&quot; == &quot;${Search First Item Detail}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=add-to-cart-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:23.055" level="INFO">Clicking element 'id=add-to-cart-button'.</msg>
+<status status="PASS" starttime="20220815 13:29:23.054" endtime="20220815 13:29:26.725"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:23.054" endtime="20220815 13:29:26.725"/>
+</branch>
+<status status="PASS" starttime="20220815 13:29:23.054" endtime="20220815 13:29:26.725"/>
+</if>
+<status status="PASS" starttime="20220815 13:29:20.968" endtime="20220815 13:29:26.726"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:19.923" endtime="20220815 13:29:26.726"/>
+</kw>
+<kw name="Before Shopping Cart Actions" library="amazonBeforeShoppingCartPageApp">
+<kw name="Verify Shopping Cart Increased" library="amazonBeforeShoppingCartPage">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id=nav-cart-count</arg>
+<arg>1</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220815 13:29:26.727" level="INFO">Verifying element 'id=nav-cart-count' contains exact text '1'.</msg>
+<status status="PASS" starttime="20220815 13:29:26.727" endtime="20220815 13:29:27.771"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:26.727" endtime="20220815 13:29:27.771"/>
+</kw>
+<kw name="Verify Product Price Equal" library="amazonBeforeShoppingCartPage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=sw-gtc</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220815 13:29:27.771" endtime="20220815 13:29:28.291"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Shopping Cart Price}</var>
+<arg>css=#sw-subtotal .a-price-whole</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:29.333" level="INFO">${Shopping Cart Price} = 456</msg>
+<status status="PASS" starttime="20220815 13:29:28.291" endtime="20220815 13:29:29.333"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Shopping Cart Price}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220815 13:29:29.334" level="INFO">${Shopping Cart Price} = 456</msg>
+<status status="PASS" starttime="20220815 13:29:29.334" endtime="20220815 13:29:29.334"/>
+</kw>
+<if>
+<branch type="IF" condition="${Detail Page Price} == ${Shopping Cart Price}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=sw-gtc</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:29.335" level="INFO">Clicking element 'id=sw-gtc'.</msg>
+<status status="PASS" starttime="20220815 13:29:29.335" endtime="20220815 13:29:32.680"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:29.334" endtime="20220815 13:29:32.680"/>
+</branch>
+<status status="PASS" starttime="20220815 13:29:29.334" endtime="20220815 13:29:32.680"/>
+</if>
+<status status="PASS" starttime="20220815 13:29:27.771" endtime="20220815 13:29:32.680"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:26.726" endtime="20220815 13:29:32.681"/>
+</kw>
+<kw name="Amazon Shopping Cart Page Actions" library="amazonShoppingCartPageApp">
+<kw name="Verify Shopping Cart Page" library="amazonShoppingCartPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Alışveriş Sepeti</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220815 13:29:33.709" level="INFO">Current page contains text 'Alışveriş Sepeti'.</msg>
+<status status="PASS" starttime="20220815 13:29:32.682" endtime="20220815 13:29:33.709"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:32.681" endtime="20220815 13:29:33.709"/>
+</kw>
+<kw name="Verify Product In Shopping Cart" library="amazonShoppingCartPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Shopping Cart Item Title}</var>
+<arg>css=[data-a-word-break] [aria-hidden]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:34.751" level="INFO">${Shopping Cart Item Title} = HP 15,6 KOBİ Üstten Açılır Çanta, Siyah, T0F83AA</msg>
+<status status="PASS" starttime="20220815 13:29:33.709" endtime="20220815 13:29:34.751"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Shopping Cart Item Title}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220815 13:29:34.751" level="INFO">${Shopping Cart Item Title} = HP 15,6 KOBİ Üstten Açılır Çanta, Siyah, T0F83AA</msg>
+<status status="PASS" starttime="20220815 13:29:34.751" endtime="20220815 13:29:34.751"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Shopping Cart Item Title}&quot; == &quot;${Search First Item Detail}&quot; and &quot;${Shopping Cart Item Title}&quot; == &quot;${Search First Item}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.sc-action-delete .a-color-link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220815 13:29:34.753" level="INFO">Clicking element 'css=.sc-action-delete .a-color-link'.</msg>
+<status status="PASS" starttime="20220815 13:29:34.752" endtime="20220815 13:29:35.857"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:34.752" endtime="20220815 13:29:35.857"/>
+</branch>
+<status status="PASS" starttime="20220815 13:29:34.752" endtime="20220815 13:29:35.857"/>
+</if>
+<status status="PASS" starttime="20220815 13:29:33.709" endtime="20220815 13:29:35.857"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:32.681" endtime="20220815 13:29:35.857"/>
+</kw>
+<kw name="Close Session" library="utilsApp" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220815 13:29:35.858" endtime="20220815 13:29:38.437"/>
+</kw>
+<status status="PASS" starttime="20220815 13:29:35.858" endtime="20220815 13:29:38.437"/>
+</kw>
+<status status="PASS" starttime="20220815 13:28:43.956" endtime="20220815 13:29:38.438"/>
+</test>
+<status status="PASS" starttime="20220815 13:28:43.716" endtime="20220815 13:29:38.439"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="amazonSearchAppTest">amazonSearchAppTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220815 13:28:43.952" level="WARN">Imported library 'C:\Users\Javesque\PycharmProjects\Amazon.com RobotFramework\Config\prod.py' contains no keywords.</msg>
+</errors>
+</robot>
