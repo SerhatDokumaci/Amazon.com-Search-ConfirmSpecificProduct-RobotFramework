@@ -3,6 +3,8 @@ I created a test case which is: go to amazon homepage, sign in, search "Bilgisay
 
 I wrote automation code with Robot Framework for this test case.
 
+I used Page Object Model for test automation.
+
 Note: Before start test, u must add your amazon sign in detail (email and password). I created 2 variables in amazonSignIn.robot file. U have to add your detail in these variables (example: ${email} =    example@gmail.com, ${password} =    password123)
 # Test Run Commands
 For run all tests: robot -d Reports -t * Tests/insuranceAppTest.robot
